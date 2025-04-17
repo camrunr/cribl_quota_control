@@ -31,7 +31,7 @@ If you do not currently copy all of your data into a data lake, you could make 2
 - First rule as above that delivers to your SIEM when under quota
 - Second rule points to a different destination, allowing you to collect the overage logs ... somewhere else
 
-There are plenty of other ways to achieve this goal! YOu can reference GVs in the routing table, for example. Choose the method that works best for you.
+There are plenty of other ways to achieve this goal! You can reference GVs in the routing table, for example. Choose the method that works best for you.
 
 # Running the script
 The script requires python 3 and the requests module. You run it with a series of flags to define the variables required.
@@ -49,7 +49,7 @@ Flags:
 - `-u` the client id or username
 - `-P` the client secret or password
 
-A sample run:
+A sample run:    
 `uv run quota_trap.py -u <client_id> -P <client_secret> -n quotaDetour -o tcp:mysiem -q 1000 -g default -l https://main-<myinstance>.cribl.cloud`
 
 If you leave off username and/or password, you will be prompted to enter them.
